@@ -1,0 +1,25 @@
+DESCRIPTION: Given two string arrays word1 and word2, return true if the two arrays represent the same string, and false otherwise.
+A string is represented by an array if the array elements concatenated in order forms the string.
+
+EXAMPLES:
+
+Example 1:
+Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
+Output: true
+Explanation:
+word1 represents string "ab" + "c" -> "abc"
+word2 represents string "a" + "bc" -> "abc"
+The strings are the same, so return true.
+
+Example 2:
+Input: word1 = ["a", "cb"], word2 = ["ab", "c"]
+Output: false
+Example 3:
+
+Input: word1  = ["abc", "d", "defg"], word2 = ["abcddefg"]
+Output: true
+
+EXPLANATION: The above question regards with how we use array with string input and consider it with two different words and concat the elements of first word and then check whether the concatenation of first word is equal to the second word or not.
+In this question we have also used string function of equals to check whether 2 strings are equal or not.
+
+
