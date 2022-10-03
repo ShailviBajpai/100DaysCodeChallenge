@@ -1,0 +1,25 @@
+QUESTION: https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/description/
+
+SOLUTION: class Solution {
+    public boolean arrayStringsAreEqual(String[] word1, String[] word2)
+     {
+         String s1="";
+         String s2="";  //Here we consider to empty strings to further add the concated strings.
+       for(int i=0; i<word1.length; i++) //loop for 1st word
+       {
+            s1+=word1[i]; //storing the concated string
+       } 
+       for(int j=0; j<word2.length; j++) //loop for second word
+       {
+            s2+=word2[j]; //storing the second concated string
+       }
+       if(s1.equals(s2)) //check whether both strings are equal or not
+       {
+           return true;
+       }
+       else 
+       {
+           return false;
+       }
+    }
+}
