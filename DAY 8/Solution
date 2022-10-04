@@ -1,0 +1,20 @@
+QUESTION: https://leetcode.com/problems/jewels-and-stones/
+
+SOLUTION: class Solution {
+    public int numJewelsInStones(String jewels, String stones) {
+        int count=0;  //consider a count variable 
+        for(int i=0;i<jewels.length(); i++). //loop for jewels string
+        {
+            for(int j=0; j<stones.length(); j++) //loop for stones string
+            {
+                char c= jewels.charAt(i);
+                char ch= stones.charAt(j); //charecter extraction for both the strings.
+                if(c==ch)
+                {
+                    count ++;
+                }
+            }
+        }
+        return count; //return the total count that matches.
+    }
+}
