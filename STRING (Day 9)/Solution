@@ -1,0 +1,17 @@
+QUESTION: https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/
+
+SOLUTION:
+    class Solution {
+    public int mostWordsFound(String[] sentences) {
+        int max = 0;
+        for(int i=0;i<sentences.length;i++){  //We will run the loop for string array which is sentences
+            if( sente(sentences[i])>max) //check if first string is greater than max or not
+                max = sente(sentences[i]);
+        }
+        return max; //return the max until it is reached
+    }
+    public int sente(String s){ //create a new function to split the strings in different indexes.
+        String str[]  =s.split(" ");
+        return str.length; //return the length of the array
+    }
+} 
