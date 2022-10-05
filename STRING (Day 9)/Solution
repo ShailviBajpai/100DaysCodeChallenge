@@ -15,3 +15,4 @@ SOLUTION:
         return str.length; //return the length of the array
     }
 } 
+ 
