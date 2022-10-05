@@ -1,0 +1,10 @@
+EXPLANATION:
+As we see that we are given an input in form of string array where we have to find out the maximum number of words in the string array
+considered as sentences in the problem.
+In the question we will follow the use of some string functions such as splt.
+by creating an another function to split the strings from each array at a specific index.
+
+Further we input a variable max which will. work as a counter variable and check for every previous string index whether it is possible to be greater or not.
+Then until max becomes the last value of the strings in the array, which means that it runs till the length of the array string, it will
+continue to do so.
+At the end it returns max which will tell us the number of maximum words in an array.
