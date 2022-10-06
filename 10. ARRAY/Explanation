@@ -1,0 +1,8 @@
+In the given problem regarding how to remove an element from an array we take an input array and the value to be removed.
+We simply run a loop till the length of array and create a counter variable which increases by 1 as soon as it matches with the given value 
+and the value present at index of i.
+In the else part of the loop we increase the value of array nums by 1 and place the value at index i in the same position.
+Further coming out of the function we return the length of the array minus the counter increased, which tells us the n umber of elements 
+removed from our array
+
+This is the approach that i have followed if any one of you has a better approach, i am always open for suggestions.
