@@ -1,0 +1,15 @@
+EXPLANATION: Here I will show the approach that i have assumed.
+
+First we will input a array and the target to be found.
+Then we initialize start and end of the array, to find the middle value and the index of the saem.
+then we run the loop until start is less than or equal to end and check for 3 important conditions.
+
+1ST CASE: if the target is less than arr[mid], then we will update the value of end,
+and move it to right hand side.
+
+2ND CASE: if the target is greater than the value at arr[mid], then we will update the value of start,
+and move it to left hand side.
+Possible until arr[mid]= target, then we will return the mid.
+
+3RD CASE: If the number doesnt exist in array.
+it will come out of the function and return -1.
