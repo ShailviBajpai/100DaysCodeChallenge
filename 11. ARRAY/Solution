@@ -1,0 +1,25 @@
+QUESTION: https://leetcode.com/problems/binary-search/description/
+
+SOLUTION: class Solution {
+    public int search(int[] nums, int target) {
+      int start=0;  //A variable start to store index 0
+      int end= nums.length-1;  //a variable end to store the value at last index
+      while(start<=end) //run the loop until start is less than or equal to end
+      {
+         int mid= start+(end-start)/2;   //calculate value at mid
+         if(target>nums[mid])
+         {
+             start= mid+1;  //change the value of start
+         } 
+         else if(target<nums[mid])
+         {
+             end= mid-1; //update the value of mid
+         }
+         else
+         {
+            return mid; //return mid, the index where target is found
+         }
+      }
+      return -1; //if target not found return -1
+    }
+}
