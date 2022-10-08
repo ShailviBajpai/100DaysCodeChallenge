@@ -1,0 +1,11 @@
+CONCATENATION OF ARRAY
+
+The approach that i have used for the given question is by declaring an another array with 
+double the size of original array.
+then as usual we run the loop till the length of original array .
+Further in the new array we store the valu at same indexes as equivalent to the original array.
+Then in the new array we store the value at index which comes at nums.length+i, which increases everytime 
+with increase in the index of original array.
+The process continues till the length of array.
+
+Then coming out of the function we return the new array created which was ans.
