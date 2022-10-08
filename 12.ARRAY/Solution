@@ -1,0 +1,13 @@
+QUESTION: https://leetcode.com/problems/concatenation-of-array/
+
+SOLUTION: class Solution {
+    public int[] getConcatenation(int[] nums) {
+        int ans[]= new int[nums.length*2];  //declare a new array of size double the size of nums array
+        for(int i=0; i<nums.length; i++) //run a loop till length of nums array
+        {
+            ans[i]= nums[i];  //store thevalues at same indexes of both the arrays
+            ans[nums.length+i]= nums[i]; //store alternative additional values at greater indexes
+        }
+        return ans; //return the ans array
+    }
+}
