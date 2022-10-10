@@ -1,0 +1,20 @@
+QUESTION: https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
+
+SOLUTION: 
+class Solution {
+    public int finalValueAfterOperations(String[] operations) {
+       int x=0;
+       for(int i=0; i<operations.length; i++) //A loop to run till the length-1 of string array
+       {
+           if(operations[i].charAt(1)=='+') //we will find and check which operation to be performed
+           {
+               x++;  //we will increase the value of x
+           }
+         else
+         {
+             x--;  //we will decrease the value of x
+         }  
+       }
+       return x;  //return the last value of x as answer.
+    }
+}
