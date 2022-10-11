@@ -1,0 +1,15 @@
+QUESTION: https://leetcode.com/problems/shuffle-the-array/description/
+
+SOLUTION: class Solution {
+    public int[] shuffle(int[] nums, int n) //Create a function shuffle 
+    {
+       int arr[]= new int[nums.length]; //initialising another array equivalent to size of nums array
+       int j=0;
+       for(int i=0; i<nums.length/2; i++) //run a loop till mid of nums array
+       {
+           arr[j++]= nums[i];  //in next index of j store the value of i index
+           arr[j++]= nums[i+n];  //incrementing j store the value of i+n from nums array
+       }
+       return arr;  //return arr array
+    }
+}
