@@ -1,0 +1,29 @@
+QUESTION: https://leetcode.com/problems/longest-palindromic-substring/description/
+
+SOLUTION: class Solution {
+    int maxPalindromeLength = Integer.MIN_VALUE;
+    String maxPalindrome = "";
+    public String longestPalindrome(String s) {
+        int i=0;
+        while(i<s.length()){
+            checkPalindrome(s,i,i);
+            checkPalindrome(s,i,i+1);
+            i++;
+        }
+        return maxPalindrome;
+        
+    }
+    
+    public void checkPalindrome(String s, int i, int j){
+        while(i>=0 && j<s.length() && s.charAt(i)==s.charAt(j)){
+            i--;
+            j++;
+        }
+        if(j-i-1 > maxPalindromeLength){
+            maxPalindrome = s.substring(i+1,j);
+            maxPalindromeLength = j-i-1;
+        }
+        
+        
+    }
+}
