@@ -1,0 +1,33 @@
+QUESTION: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/description/
+
+SOLUTION: class Solution {
+    public List<Boolean> kidsWithCandies(int[] candies, int extraCandies)
+    {
+     List<Boolean> cnlist = new ArrayList<>();
+     int max = maxcan(candies);
+     for(int k=0; k<candies.length; k++)
+     {
+         if(candies[k]+extraCandies >= max)
+         {
+             cnlist.add(true);
+         }
+         else
+         {
+             cnlist.add(false);
+         }
+     }
+     return(cnlist);
+    }
+int maxcan(int arr[])
+{
+    int max=0;
+    for(int i=0; i<arr.length; i++)
+    {
+        if(arr[i]>max)
+        {
+           max= arr[i];
+        }
+    }
+    return max;
+}
+}
