@@ -1,0 +1,23 @@
+QUESTION: https://leetcode.com/problems/truncate-sentence/description/
+
+SOLUTION: class Solution {
+    public String truncateSentence(String s, int k) 
+    {
+        String str = "";
+        int pos=0;
+      for(int i=1; i<=k; i++)
+      {
+          for(int j=pos; j<s.length(); j++)
+          {
+              if(s.charAt(j)==' ')
+              {
+                  str = str+' ';
+                  pos = j+1;
+                  break;
+              }
+              str= str+ s.charAt(j);
+          }
+      } 
+      return (str.trim()); 
+    }
+}
