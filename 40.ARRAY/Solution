@@ -1,0 +1,20 @@
+QUESTION: https://leetcode.com/problems/find-first-palindromic-string-in-the-array/description/
+
+SOLUTION: class Solution {
+    public String firstPalindrome(String[] words) 
+    {
+        String s= "";
+      for(int i=0; i<words.length; i++)
+      {   
+        for(int j=words[i].length()-1;j>=0;j--)
+         { 
+           s+=words[i].charAt(j);         
+         }
+          if(s.equals(words[i])){
+          break;
+          }
+        s="";
+      } 
+      return s;
+    }
+}
