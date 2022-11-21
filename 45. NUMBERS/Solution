@@ -1,0 +1,12 @@
+QUESTION: https://leetcode.com/problems/sqrtx/description/
+
+SOLUTION: class Solution {
+    public int mySqrt(int x) 
+    {
+       double sum=0;
+       sum=(Math.sqrt(x));
+       double i = Math.floor(sum);
+       int j= (int)i;
+       return j;
+    }
+}
