@@ -1,0 +1,22 @@
+QUESTION: https://leetcode.com/problems/replace-all-digits-with-characters/description/
+
+SOLUTION: class Solution {
+    public String replaceDigits(String s)
+    {
+      String str="";
+      for(int i=0; i<s.length(); i++)
+      {
+          int num=0;
+          if(Character.isDigit(s.charAt(i))==true)
+          {
+            num=((int)s.charAt(i-1)) + Integer.parseInt(String.valueOf(s.charAt(i)));
+            str=str+(char)num;
+          }
+          else
+          {
+              str=str+s.charAt(i);
+          }
+      } 
+      return str; 
+    }
+}
