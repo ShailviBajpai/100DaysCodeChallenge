@@ -1,0 +1,28 @@
+QUESTION: https://leetcode.com/problems/kth-distinct-string-in-an-array/description/
+
+SOLUTION: class Solution {
+    public String kthDistinct(String[] arr, int k) 
+    {
+      int c=0;
+      String ch="";
+      int i=0, j=0;
+      for(i=0; i<arr.length; i++)
+      {
+          for(j=0; j<arr.length; j++)
+          {
+              if(arr[i].equals(arr[j]) && i!=j)
+              break;
+          }
+          if(j==arr.length)
+          {
+            c++;
+          }
+          if(c==k)
+          {
+              ch=arr[i];
+              break;
+          }
+      } 
+      return ch;  
+    }
+}
