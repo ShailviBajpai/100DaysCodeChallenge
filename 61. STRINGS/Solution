@@ -1,0 +1,45 @@
+QUESTION: https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
+
+SOLUTION: class Solution {
+    public String removeDuplicates(String s) {
+        String str="";
+        for(int i=0; i<s.length(); i++)
+        {
+            if(!str.contains(String.valueOf(i)))
+            {
+                for(int j=i+1; j<s.length(); j++)
+                {
+                    if(s.charAt(i)==s.charAt(j))
+                    {
+                        str+=i+"-"+j+"-";
+                        break;
+                    }
+                }
+            }
+        }
+        String arr[]=str.split("-");
+        str = ret(arr, s);
+        return(str);
+    }
+    String ret(String arr[], String s)
+    {
+        String str="";
+        for(int i=0; i<s.length(); i++)
+        {
+            int flag=0;
+            for(int j=0; j<arr.length; j++)
+            {
+                if(i==(Integer.parseInt(arr[j])))
+                {
+                    flag=1;
+                    break;
+                }
+            }
+            if(flag==0)
+            {
+                str+=s.charAt(i);
+            }
+        }
+        return(str);
+    }
+}
