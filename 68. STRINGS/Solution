@@ -1,0 +1,13 @@
+QUESTION: https://leetcode.com/problems/add-strings/
+
+SOLUTION: class Solution {
+    public String addStrings(String num1, String num2) 
+    {
+      long sum=0;
+      long i= Long.parseLong(num1);
+      long j= Long.parseLong(num2);
+      sum = i+j;
+      String s= String.valueOf(sum);
+      return s;
+    }
+}
