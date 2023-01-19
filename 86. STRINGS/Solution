@@ -1,0 +1,33 @@
+QUESTION: https://leetcode.com/problems/check-if-number-has-equal-digit-count-and-digit-value/description/
+
+SOLUTION: class Solution {
+    public boolean digitCount(String num) {
+        String str=Count(num);
+        if(num.equals(str))
+        {
+             return true;
+        }
+        else 
+        {
+           return false;
+        }
+    }
+    String Count(String str)
+    {
+        String str1="";
+        for(int i=0; i<str.length(); i++)
+        {
+            int count=0;
+            for (int j=0; j<str.length(); j++)
+            {
+                if (i==Integer.parseInt(String.valueOf(str.charAt(j))))
+                {
+                    count++;
+                }
+            }
+            str1=str1+count;
+        }
+     System.out.println(str1);
+     return (str1);
+    }
+}
